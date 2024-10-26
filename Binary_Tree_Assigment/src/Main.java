@@ -34,12 +34,12 @@ public class Main {
 		Person peach = new Person("Peach", 183, 60);
 
 		SortedTreeSet personSet = new SortedTreeSet();
-		//personSet.add(noah);
-		//   personSet.add(mario);
-		//   personSet.add(peach);
-		//   personSet.add(noahDup);
-		//System.out.println(personSet.allPersonData());
-		//System.out.println();
+		personSet.add(noah);
+		   personSet.add(mario);
+		   personSet.add(peach);
+		   personSet.add(noahDup);
+		personSet.inOrderTraversal();
+		System.out.println();
 
 		String name; // Holds name while reading in
 		double height; // Holds height while reading in<

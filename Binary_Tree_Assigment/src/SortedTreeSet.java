@@ -15,7 +15,6 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         this.data = null;
         this.left = null;
         this.right = null;
-
     }
 
     // Constructor for a new node w/ data
@@ -23,7 +22,6 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         this.data = data;
         this.left = null;
         this.right = null;
-
     }
 
     public boolean hasLeft() {
@@ -79,5 +77,11 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         }
 
     }
+    public void inOrderTraversal() {
+        if (left != null) left.inOrderTraversal();
+        System.out.println(data); // Print root
+        if (right != null) right.inOrderTraversal();
+    }
+
 
 }
