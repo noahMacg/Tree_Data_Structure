@@ -10,6 +10,6 @@ public interface PersonList {
 
     public void add(Person p);
 
-    public Person get(int index);
+    //public Person get(int index);
 
 }
