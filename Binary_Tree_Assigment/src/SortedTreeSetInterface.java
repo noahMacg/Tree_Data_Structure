@@ -1,7 +1,7 @@
 
 public interface SortedTreeSetInterface<T> //Binary Tree
 {
-	//public Person getPerson();
+	public Person getPerson();
 
 	public boolean hasLeft();
 

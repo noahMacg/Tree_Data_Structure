@@ -1,0 +1,2 @@
+<<"\n******** Nintendo's HR Data ********\n">>
+Name       Height(cm)    Weight(kg)

@@ -41,7 +41,12 @@ public class PersonSet implements PersonList {
         }
         return allData;
     }
-
+    // Returns header
+    public static String outputHeader() {
+        String title = "<<\"\\n******** Nintendo's HR Data ********\\n\">>";
+        String header = String.format("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
+        return title + "\n" + header;
+    }
     // Prints header + the ordered set
     public static String outputOrderedSet(PersonSet p) {
         String title = "<<Nintendo's human resources data>>";
