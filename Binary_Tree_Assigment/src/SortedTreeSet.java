@@ -12,7 +12,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
     private SortedTreeSet right;
 
     public Person getPerson() {
-        return data;
+        return this.data;
     }
 
     // Constructor for a new node w/o data
@@ -28,6 +28,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         this.left = null;
         this.right = null;
     }
+
     // Checks if the left branch on the current node is null
     public boolean hasLeft() {
         if (this.left == null) {
@@ -35,6 +36,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         }
         return true;
     }
+
     // Sets the left side of the node to (left)
     public void setLeft(SortedTreeSet left) {
         this.left = left;
@@ -52,6 +54,7 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         return true;
     }
 
+    // Sets the right side of the node to (right)
     public void setRight(SortedTreeSet right) {
         this.right = right;
     }
@@ -61,7 +64,8 @@ public class SortedTreeSet implements SortedTreeSetInterface {
         return this.right;
     }
 
-    // Adds the Person in alphabetical order
+    // Adds the Person in alphabetical order and
+    // checks for duplicates
     public void add(Person p) {
         // If there is no data set current node to root
         if (this.data == null) {
@@ -89,45 +93,35 @@ public class SortedTreeSet implements SortedTreeSetInterface {
             }
         }
     }
-    /*  This method I found in the CGPT query noted above. At first
-        it was confusing how one print statement would print the
-        whole tree - I asked it how this worked and learned it uses
+    /*  I found the getDataSet method below in the CGPT query noted above
+        and was confused how one print statement would print the
+        whole tree. I asked it how this worked and learned it uses
         recursion. This works by traversing down the left branch
         from the root until it is null (which means it is at a leaf),
         and prints each left sided node until it gets to the root,
         then does the left sided right branches, the root, and then
-        follows the same logic on the right side.
+        follows the same logic on the right side. I then realized that
+        I needed to return a string if I wanted to print to a file, so
+        I came up with the below which did not work and I asked CGPT
+        what was wrong with it and used the StringBuilder.
      */
 
-    public String inOrderTraversal() {
-        StringBuilder result = new StringBuilder();
-        inOrderTraversalHelper(result);
-        return result.toString();
+    //    private String getDataSet() {
+    //        String temp = "";
+    //        if (left != null) left.getDataSet();
+    //        temp = temp + data +"\n"
+    //        if (right != null) right.getDataSet();
+    //        return temp;
+    //    }
+
+    public String getDataSet() {
+        StringBuilder temp = new StringBuilder(); // Use StringBuilder for efficient concatenation
+
+        if (left != null)
+            temp.append(left.getDataSet()); // Traverse left subtree
+        temp.append(data).append("\n"); // Visit current node
+        if (right != null)
+            temp.append(right.getDataSet()); // Traverse right subtree
+        return temp.toString();
     }
-
-    private void inOrderTraversalHelper(StringBuilder result) {
-        if (left != null) left.inOrderTraversalHelper(result); // Traverse left subtree
-        result.append(data.toString()).append("\n"); // Visit root (current node)
-        if (right != null) right.inOrderTraversalHelper(result); // Traverse right subtree
-    }
-
-//    public Person getTargetInfo(String target) {
-//        String locate = target;
-//        if (left != null) left.inOrderTraversal() {
-//            if (locate.equalsIgnoreCase(this.data.getName())) {
-//                System.out.println("Target found: " + this.data);
-//                return this.data;
-//            }
-//        }
-//
-//        if (right != null) right.inOrderTraversal() {
-//            if (locate.equalsIgnoreCase(this.data.getName())) {
-//                System.out.println("Target found: " + this.data);
-//                return this.data;
-//            }
-//        }
-//        System.out.println("Person not found.");
-//        return null;
-//    }
-
 }

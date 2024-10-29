@@ -41,22 +41,24 @@ public class PersonSet implements PersonList {
         }
         return allData;
     }
+
     // Returns header
     public static String outputHeader() {
-        String title = "<<\"\\n******** Nintendo's HR Data ********\\n\">>";
+        String title = "******** Nintendo's HR Data ********";
         String header = String.format("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
         return title + "\n" + header;
     }
-    // Prints header + the ordered set
+
+    // Returns header + the ordered set
     public static String outputOrderedSet(PersonSet p) {
-        String title = "<<Nintendo's human resources data>>";
+        String title = "\"******** Nintendo's HR Data ********\"";
         String header = String.format("%-10s %10s %14s", "Name", "Height(cm)", "Weight(kg)" + "\n");
         return title + "\n" + header + p;
     }
 
-    // Prints header + the imperial set
+    // Returns header + the imperial set
     public static String outputImperialSet(PersonSet p) {
-        String title = "<<Nintendo's human resources data>>";
+        String title = "\"******** Nintendo's HR Data ********\"";
         String header = String.format("%-10s %10s %14s", "Name", "Height(ft)", "Weight(lbs)" + "\n");
         return title + "\n" + header + p.toString();
     }
