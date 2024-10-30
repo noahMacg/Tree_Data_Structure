@@ -55,15 +55,12 @@ public class Main {
 
 			while (fileReader.hasNext()) {
 
-				if (fileReader.hasNextLine()) {
-					name = fileReader.next();
-					height = fileReader.nextDouble();
-					weight = fileReader.nextDouble();
+				name = fileReader.next();
+				height = fileReader.nextDouble();
+				weight = fileReader.nextDouble();
 
-					Person orderPerson = new Person(name, height, weight);
-					binaryTree.add(orderPerson);
-				} else
-					break;
+				Person orderPerson = new Person(name, height, weight);
+				binaryTree.add(orderPerson);
 
 			}
 			fileReader.close();
