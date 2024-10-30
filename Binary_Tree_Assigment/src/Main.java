@@ -34,9 +34,9 @@ public class Main {
 
 		//		SortedTreeSet personSet = new SortedTreeSet();
 		//		personSet.add(noah);
-		//		   personSet.add(mario);
-		//		   personSet.add(peach);
-		//		   personSet.add(noahDup);
+		//		personSet.add(mario);
+		//		personSet.add(peach);
+		//		personSet.add(noahDup);
 		//		personSet.inOrderTraversal();
 		//		System.out.println();
 		//

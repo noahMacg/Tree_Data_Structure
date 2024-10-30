@@ -67,12 +67,12 @@ public class SortedTreeSet implements SortedTreeSetInterface {
     // Adds the Person in alphabetical order and
     // checks for duplicates
     public void add(Person p) {
-        // If there is no data set current node to root
+        // If there is no root
         if (this.data == null) {
             this.data = p;
             return;
         }
-        // Check for duplicates; uses equals() in Person.java
+        // Checks for duplicates; uses equals() in Person.java
         if (this.data.equals(p)) {
             return;
         }
