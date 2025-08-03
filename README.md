@@ -30,6 +30,7 @@ Tree_Data_Structure/
 - At this time the .txt input file is hard coded into Main.java and needs to be changed accordingly. 
 
 ## Sample Output
+```
 ******** Nintendo's HR Data ********
 Name       Height(cm)    Weight(kg)
 Bowser         310         726
@@ -37,3 +38,4 @@ Luigi          158          83
 Mario          155          90
 Peach          183          60
 Toad            41           7
+```
