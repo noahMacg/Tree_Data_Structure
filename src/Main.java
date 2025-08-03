@@ -25,7 +25,7 @@ public class Main {
 		// String filePath = args[0];
 
 		// Testing
-		String filePath = "C:\\Users\\pilga\\code\\CS2251_code\\Tree_Data_Structure\\Binary_Tree_Assigment\\src\\hr.txt";
+		String filePath = "/home/noahmac/Documents/Code/CS2251_code/Tree_Data_Structure/src/hr.txt";
 
 		//		Person noah = new Person("Noah", 172, 72);
 		//		Person mario = new Person("Mario", 155, 90);
