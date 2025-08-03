@@ -5,7 +5,7 @@
 This project demonstrates construction of a binary search tree that automatically detects duplicates and does alphabetical sorting. 
 
 ## Project Structure 
-
+```
 Tree_Data_Structure/
 ├── src/
 │   ├── Main.java                    # Program entry point
@@ -16,4 +16,5 @@ Tree_Data_Structure/
 │   ├── PersonSet.java               # ArrayList implementation
 │   └── hr.txt                       # Data input
 └── README.md
+```
 ## 
