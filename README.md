@@ -26,6 +26,7 @@ Tree_Data_Structure/
 - Class interaction and interface 
 
 ## How to Run
+- Java 22 or compatible 
 - Compile and run Main.java
 - At this time the .txt input file is hard coded into Main.java and needs to be changed accordingly. 
 
