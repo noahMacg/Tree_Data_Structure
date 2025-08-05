@@ -17,7 +17,7 @@ Tree_Data_Structure/
 │   └── hr.txt                       # Data input
 └── README.md
 ```
-## Learning points 
+## Learning Points 
 - Binary search tree implementation with recursion 
 - Duplicate detection 
 - Alphabetic sorting
